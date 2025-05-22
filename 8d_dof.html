@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8D/DÖF Modülü</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>8D/DÖF Modülü</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>8D/DÖF Süreci Girişi</h2>
+        <form id="form8D">
+            <div>
+                <label for="txt8dProblemBasligi">Problem Başlığı/No:</label>
+                <input type="text" id="txt8dProblemBasligi" name="txt8dProblemBasligi" required>
+            </div>
+
+            <h3>D0: Hazırlık ve Acil Durum Müdahale Eylemleri (Opsiyonel)</h3>
+            <div>
+                <label for="txtD0Belirtiler">Belirtiler:</label>
+                <textarea id="txtD0Belirtiler" name="txtD0Belirtiler" rows="3"></textarea>
+            </div>
+
+            <h3>D1: Ekip Kurma</h3>
+            <div>
+                <label for="txtD1EkipLideri">Ekip Lideri:</label>
+                <input type="text" id="txtD1EkipLideri" name="txtD1EkipLideri" required>
+            </div>
+            <div>
+                <label for="txtD1EkipUyeleri">Ekip Üyeleri:</label>
+                <textarea id="txtD1EkipUyeleri" name="txtD1EkipUyeleri" rows="3" required></textarea>
+            </div>
+
+            <h3>D2: Problemi Tanımlama</h3>
+            <div>
+                <label for="txtD2ProblemTanimi">Problemin Detaylı Tanımı:</label>
+                <textarea id="txtD2ProblemTanimi" name="txtD2ProblemTanimi" rows="4" required></textarea>
+            </div>
+            <div>
+                <label for="txtD2Kim">Kim?:</label>
+                <input type="text" id="txtD2Kim" name="txtD2Kim">
+            </div>
+            <div>
+                <label for="txtD2Ne">Ne?:</label>
+                <input type="text" id="txtD2Ne" name="txtD2Ne">
+            </div>
+            <div>
+                <label for="txtD2Nerede">Nerede?:</label>
+                <input type="text" id="txtD2Nerede" name="txtD2Nerede">
+            </div>
+            <div>
+                <label for="txtD2NeZaman">Ne Zaman?:</label>
+                <input type="text" id="txtD2NeZaman" name="txtD2NeZaman">
+            </div>
+            <div>
+                <label for="txtD2Neden">Neden?:</label>
+                <input type="text" id="txtD2Neden" name="txtD2Neden">
+            </div>
+            <div>
+                <label for="txtD2Nasil">Nasıl?:</label>
+                <input type="text" id="txtD2Nasil" name="txtD2Nasil">
+            </div>
+            <div>
+                <label for="txtD2KacAdet">Kaç Adet/Ne Sıklıkta?:</label>
+                <input type="text" id="txtD2KacAdet" name="txtD2KacAdet">
+            </div>
+
+            <h3>D3: Geçici Çevreleme Faaliyetleri Geliştirme (ICA)</h3>
+            <div>
+                <label for="txtD3GeciciOnlemler">Alınan Geçici Önlemler ve Doğrulama:</label>
+                <textarea id="txtD3GeciciOnlemler" name="txtD3GeciciOnlemler" rows="3"></textarea>
+            </div>
+            <div>
+                <label for="dateD3GeciciOnlemTarih">Uygulama Tarihi:</label>
+                <input type="date" id="dateD3GeciciOnlemTarih" name="dateD3GeciciOnlemTarih">
+            </div>
+
+            <h3>D4: Kök Nedenleri Tanımlama ve Doğrulama (RCA)</h3>
+            <div>
+                <label for="txtD4KokNedenler">Tespit Edilen Kök Neden(ler):</label>
+                <textarea id="txtD4KokNedenler" name="txtD4KokNedenler" rows="4" required></textarea>
+            </div>
+            <div>
+                <label for="txtD4DogrulamaYontemi">Kök Neden Doğrulama Yöntemi:</label>
+                <textarea id="txtD4DogrulamaYontemi" name="txtD4DogrulamaYontemi" rows="3"></textarea>
+            </div>
+
+            <h3>D5: Kalıcı Düzeltici Faaliyetleri (PCA) Seçme ve Doğrulama</h3>
+            <div>
+                <label for="txtD5SecilenPCA">Seçilen Kalıcı Düzeltici Faaliyet(ler):</label>
+                <textarea id="txtD5SecilenPCA" name="txtD5SecilenPCA" rows="4" required></textarea>
+            </div>
+            <div>
+                <label for="txtD5PCADogrulamaPlani">PCA Doğrulama Planı:</label>
+                <textarea id="txtD5PCADogrulamaPlani" name="txtD5PCADogrulamaPlani" rows="3"></textarea>
+            </div>
+
+            <h3>D6: Kalıcı Düzeltici Faaliyetleri Uygulama ve Doğrulama</h3>
+            <div>
+                <label for="txtD6UygulamaDetaylari">Uygulama Detayları ve Sorumlular:</label>
+                <textarea id="txtD6UygulamaDetaylari" name="txtD6UygulamaDetaylari" rows="3"></textarea>
+            </div>
+            <div>
+                <label for="dateD6UygulamaTarih">Uygulama Tarihi:</label>
+                <input type="date" id="dateD6UygulamaTarih" name="dateD6UygulamaTarih">
+            </div>
+            <div>
+                <label for="txtD6PCAEtkinlikDogrulama">PCA Etkinliğinin Doğrulanması:</label>
+                <textarea id="txtD6PCAEtkinlikDogrulama" name="txtD6PCAEtkinlikDogrulama" rows="3"></textarea>
+            </div>
+
+            <h3>D7: Tekrarı Önleme</h3>
+            <div>
+                <label for="txtD7SistemikOnlemler">Alınan Sistemik Önlemler (Prosedür, Talimat, Eğitim vb.):</label>
+                <textarea id="txtD7SistemikOnlemler" name="txtD7SistemikOnlemler" rows="4"></textarea>
+            </div>
+
+            <h3>D8: Ekibi Takdir Etme</h3>
+            <div>
+                <label for="txtD8TakdirNotlari">Ekip Takdiri ve Kapanış Notları:</label>
+                <textarea id="txtD8TakdirNotlari" name="txtD8TakdirNotlari" rows="3"></textarea>
+            </div>
+
+            <div>
+                <button type="button" id="btnKaydet8D">8D Kaydet</button>
+                <button type="button" id="btnTemizleForm8D">Temizle</button>
+            </div>
+        </form>
+
+        <h2>Kaydedilen 8D/DÖF Raporları</h2>
+        <div id="8dListesiAlani">
+            <p>Henüz kaydedilmiş 8D/DÖF raporu bulunmamaktadır.</p>
+        </div>
+    </main>
+    <script src="js/main.js"></script> <!-- Genel JS, eğer varsa -->
+    <script src="js/8d_dof.js"></script>
+</body>
+</html>
