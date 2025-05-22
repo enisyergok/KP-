@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMEA Modülü</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FMEA Modülü</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>FMEA Oluştur/Düzenle</h2>
+        <form id="fmeaForm">
+            <div>
+                <label for="txtFmeaProjeAdi">Proje/Parça Adı:</label>
+                <input type="text" id="txtFmeaProjeAdi" name="txtFmeaProjeAdi" required>
+            </div>
+            <div>
+                <label for="txtFmeaProsesAdimi">Proses Adımı/Fonksiyon:</label>
+                <input type="text" id="txtFmeaProsesAdimi" name="txtFmeaProsesAdimi" required>
+            </div>
+            <div>
+                <label for="txtFmeaHataTuru">Potansiyel Hata Türü:</label>
+                <input type="text" id="txtFmeaHataTuru" name="txtFmeaHataTuru" required>
+            </div>
+            <div>
+                <label for="txtFmeaHataEtkisi">Potansiyel Hata Etkileri:</label>
+                <textarea id="txtFmeaHataEtkisi" name="txtFmeaHataEtkisi" rows="3" required></textarea>
+            </div>
+            <div>
+                <label for="numFmeaSiddet">Şiddet (1-10):</label>
+                <input type="number" id="numFmeaSiddet" name="numFmeaSiddet" min="1" max="10" required>
+            </div>
+            <div>
+                <label for="txtFmeaHataNedeni">Potansiyel Hata Nedenleri/Mekanizmaları:</label>
+                <textarea id="txtFmeaHataNedeni" name="txtFmeaHataNedeni" rows="3" required></textarea>
+            </div>
+            <div>
+                <label for="numFmeaOlasilik">Olasılık (1-10):</label>
+                <input type="number" id="numFmeaOlasilik" name="numFmeaOlasilik" min="1" max="10" required>
+            </div>
+            <div>
+                <label for="txtFmeaMevcutKontroller">Mevcut Proses Kontrolleri:</label>
+                <textarea id="txtFmeaMevcutKontroller" name="txtFmeaMevcutKontroller" rows="3"></textarea>
+            </div>
+            <div>
+                <label for="numFmeaTespitEdilebilirlik">Tespit Edilebilirlik (1-10):</label>
+                <input type="number" id="numFmeaTespitEdilebilirlik" name="numFmeaTespitEdilebilirlik" min="1" max="10" required>
+            </div>
+            <div>
+                <label for="lblFmeaRpn">RPN (ŞxOxT):</label>
+                <span id="lblFmeaRpn"></span>
+                <!-- <input type="text" id="lblFmeaRpn" name="lblFmeaRpn" readonly> -->
+            </div>
+            <div>
+                <label for="txtFmeaOnerilenFaaliyet">Önerilen Faaliyet:</label>
+                <textarea id="txtFmeaOnerilenFaaliyet" name="txtFmeaOnerilenFaaliyet" rows="3"></textarea>
+            </div>
+            <div>
+                <label for="txtFmeaSorumlu">Sorumlu:</label>
+                <input type="text" id="txtFmeaSorumlu" name="txtFmeaSorumlu">
+            </div>
+            <div>
+                <label for="dateFmeaTermin">Termin Tarihi:</label>
+                <input type="date" id="dateFmeaTermin" name="dateFmeaTermin">
+            </div>
+            <div>
+                <button type="button" id="btnKaydetFMEA">FMEA Kaydet</button>
+                <button type="button" id="btnTemizleForm">Temizle</button>
+            </div>
+        </form>
+
+        <h2>Kaydedilen FMEA'lar</h2>
+        <div id="fmeaListesiAlani">
+            <p>Henüz kaydedilmiş FMEA bulunmamaktadır.</p>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/fmea.js"></script>
+</body>
+</html>

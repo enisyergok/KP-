@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPAP Modülü</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PPAP Modülü</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>PPAP Paketi Oluştur/Yönet</h2>
+        <form id="formPPAP">
+            <h3>Genel Bilgiler</h3>
+            <div>
+                <label for="txtPpapParcaNo">Parça Numarası:</label>
+                <input type="text" id="txtPpapParcaNo" name="txtPpapParcaNo" required>
+            </div>
+            <div>
+                <label for="txtPpapParcaAdi">Parça Adı:</label>
+                <input type="text" id="txtPpapParcaAdi" name="txtPpapParcaAdi" required>
+            </div>
+            <div>
+                <label for="txtPpapMusteri">Müşteri:</label>
+                <input type="text" id="txtPpapMusteri" name="txtPpapMusteri" required>
+            </div>
+            <div>
+                <label for="txtPpapTedarikci">Tedarikçi:</label>
+                <input type="text" id="txtPpapTedarikci" name="txtPpapTedarikci">
+            </div>
+            <div>
+                <label for="datePpapSunumTarihi">Sunum Tarihi:</label>
+                <input type="date" id="datePpapSunumTarihi" name="datePpapSunumTarihi" required>
+            </div>
+            <div>
+                <label for="selPpapSunumSeviyesi">Sunum Seviyesi (1-5):</label>
+                <select id="selPpapSunumSeviyesi" name="selPpapSunumSeviyesi" required>
+                    <option value="">Seçiniz...</option>
+                    <option value="1">Seviye 1</option>
+                    <option value="2">Seviye 2</option>
+                    <option value="3">Seviye 3</option>
+                    <option value="4">Seviye 4</option>
+                    <option value="5">Seviye 5</option>
+                </select>
+            </div>
+
+            <h3>PPAP Elementleri</h3>
+            <div id="ppapElementleriListesi">
+                <!-- Dinamik element satırları buraya eklenecek -->
+            </div>
+            <button type="button" id="btnYeniPpapElementiEkle" style="margin-top: 10px;">Yeni Element Ekle</button>
+
+            <div style="margin-top: 20px;">
+                <button type="button" id="btnKaydetPPAP">PPAP Kaydet</button>
+                <button type="button" id="btnTemizleFormPPAP">Temizle</button>
+            </div>
+        </form>
+
+        <h2>Kaydedilen PPAP Paketleri</h2>
+        <div id="ppapListesiAlani">
+            <p>Henüz kaydedilmiş PPAP paketi bulunmamaktadır.</p>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/ppap.js"></script>
+</body>
+</html>
